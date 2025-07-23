@@ -32,10 +32,10 @@ export default function Home() {
                 </header>
                 <div className="header-content">
                     <h2>
-                        WELCOME PACKAGE
+                        {t('headerTop')}
                     </h2>
                     <h1>
-                        500% BONUS AND 777 FREE SPINS AND €150 FREEBET
+                        {t('header')}
                     </h1>
                 </div>
                 <img src="/images/indiana.png" alt="indiana" className="indiana"/>
@@ -45,8 +45,8 @@ export default function Home() {
                 <img src="/images/coin.png" alt="coin" className="coin3"/>
                 <img src="/images/coin.png" alt="coin" className="coin4"/>
                 <div className="button">
-                    <a href={`https://dreamplay17.com/en-de/games/category/slots/voyage?stag=${params.stag}&tracking_link=${params.tracking_link}`} target="_blank"><span
-                        className="sign-up">Sing up now</span><span>it takes only 1 minute</span></a>
+                    <a href={`https://dreamplay17.com/?registration=true?stag=${params.stag}&tracking_link=${params.tracking_link}`} target="_blank"><span
+                        className="sign-up">{t('signUp')}</span><span>{t('takes')}</span></a>
                 </div>
             </div>
             <div className="wrapper">
@@ -54,28 +54,27 @@ export default function Home() {
                     <div className="step">
                         <span className="step-index">1</span>
                         <div className="step-content">
-                            <h3>Register</h3>
+                            <h3>{t('register')}</h3>
                             <p>
-                                Create your Dreamplay account in a few clicks.
+                                {t('registerDesc')}
                             </p>
                         </div>
                     </div>
                     <div className="step">
                         <span className="step-index">2</span>
                         <div className="step-content">
-                            <h3>Deposit</h3>
+                            <h3>{t('deposit')}</h3>
                             <p>
-                                Use your preferred method — Visa, Mastercard, Skrill, Neteller, Apple Pay, Google Pay,
-                                Crypto.
+                                {t('depositDesc')}
                             </p>
                         </div>
                     </div>
                     <div className="step">
                         <span className="step-index">3</span>
                         <div className="step-content">
-                            <h3>Play Game</h3>
+                            <h3>{t('play')}</h3>
                             <p>
-                                Enjoy 10,000+ premium slots and live casino action.
+                                {t('playDesc')}
                             </p>
                         </div>
                     </div>
@@ -99,13 +98,12 @@ export default function Home() {
                 </div>
                 <footer className="footer">
                     <h3>
-                        Dreamplay: Play Elite. Play Secure.
+                        {t('footerHeader')}
                     </h3>
                     <ul>
-                        <li>Dreamplay is licensed, secure, and trusted by players across Europe.</li>
-                        <li>Fast payouts, elite games, and 24/7 support.</li>
-                        <li>Top payments methods.</li>
-
+                        <li>{t('footerList.first')}</li>
+                        <li>{t('footerList.second')}</li>
+                        <li>{t('footerList.third')}</li>
                     </ul>
                 </footer>
             </div>

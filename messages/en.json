@@ -1,18 +1,18 @@
 {
-  "headerTop": "Step into Dreamplay! 500% Welcome Bonus ",
-  "headerYellowFirst": "up to €6,000",
-  "and": " and",
-  "headerYellowSecond": "777 Free Spins",
-  "headerFinish": " greet you like royalty.",
-  "sectors": {
-    "first": "1 BTC",
-    "second": "500% AND 777 FS",
-    "third": "€10.000",
-    "fourth": "TRY AGAIN",
-    "fifth": "PSS PRO",
-    "sixth": "500%",
-    "seventh": "TRY AGAIN",
-    "eighth": "777 FS"
-  },
-  "coeff": "0.2"
+  "headerTop": "WELCOME PACKAGE",
+  "header": "500% BONUS AND 777 FREE SPINS AND €150 FREEBET",
+  "signUp": "Sing up now",
+  "takes": "it takes only 1 minute",
+  "register": "Register",
+  "deposit": "Deposit",
+  "play": "Play Game",
+  "registerDesc": "Create your Dreamplay account in a few clicks.",
+  "depositDesc": "Use your preferred method — Visa, Mastercard, Skrill, Neteller, Apple Pay, Google Pay, Crypto.",
+  "playDesc": "Enjoy 10,000+ premium slots and live casino action.",
+  "footerHeader": "Dreamplay: Play Elite. Play Secure.",
+  "footerList": {
+    "first": "Dreamplay is licensed, secure, and trusted by players across Europe.",
+    "second": "Fast payouts, elite games, and 24/7 support.",
+    "third": "Top payments methods."
+  }
 }

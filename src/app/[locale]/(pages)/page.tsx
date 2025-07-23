@@ -1,9 +1,6 @@
 'use client';
-import { useState } from 'react';
-import Wheel from "@/app/Wheel";
 import {useTranslations} from "next-intl";
 import {ReadonlyURLSearchParams, useSearchParams} from "next/navigation";
-import Modal from "@/app/components/modal/modal";
 interface Params {
     [key: string]: string | null;
 }

@@ -42,7 +42,7 @@ export default function Home() {
                 <img src="/images/coin.png" alt="coin" className="coin3"/>
                 <img src="/images/coin.png" alt="coin" className="coin4"/>
                 <div className="button">
-                    <a href={`https://dreamplay17.com/?registration=true?stag=${params.stag}&tracking_link=${params.tracking_link}`} target="_blank"><span
+                    <a href={`https://dreamplay.bet/?registration=true?stag=${params.stag}&tracking_link=${params.tracking_link}`} target="_blank"><span
                         className="sign-up">{t('signUp')}</span><span>{t('takes')}</span></a>
                 </div>
             </div>

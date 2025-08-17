@@ -19,10 +19,10 @@ const poppins = Poppins({
 
 export default async function LocaleLayout({children, params}: {
     children: React.ReactNode;
-    params: { locale: 'en-CA' | 'fr-CA' }
+    params: { locale: 'en' | 'de' }
 }) {
     // @ts-ignore
-    const {locale}: 'en-CA' | 'fr-CA' = await params;
+    const {locale}: 'en' | 'de' = await params;
     const messages = await getMessages();
 
     setRequestLocale(locale);

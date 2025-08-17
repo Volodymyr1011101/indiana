@@ -11,9 +11,9 @@ export default function AutoLanguageRedirect() {
         const cookieExists = cookies.some(c => c.startsWith('NEXT_LOCALE='));
         if (cookieExists) return;
         const browserLang = navigator.languages;
-        const hasEnglish = browserLang.some(locale => locale.startsWith('fr'));
+        const hasEnglish = browserLang.some(locale => locale.startsWith('en'));
         console.log(hasEnglish, browserLang);
-        const targetLocale = hasEnglish ? 'fr-CA' : 'ne-CA';
+        const targetLocale = hasEnglish ? 'en' : 'de';
 
         document.cookie = `NEXT_LOCALE=${targetLocale}; path=/; max-age=31536000`;
 

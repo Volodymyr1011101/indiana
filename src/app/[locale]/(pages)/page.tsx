@@ -1,6 +1,12 @@
 'use client';
+import { useState } from 'react';
+import Wheel from "@/app/Wheel";
 import {useTranslations} from "next-intl";
 import {ReadonlyURLSearchParams, useSearchParams} from "next/navigation";
+import Modal from "@/app/components/modal/modal";
+import {cardData, Footer, Payments} from "@/app/Data";
+import Card from "@/app/components/card/Card";
+import Payment from "@/app/components/Payments/Payment";
 interface Params {
     [key: string]: string | null;
 }
@@ -35,72 +41,51 @@ export default function Home() {
                         {t('header')}
                     </h1>
                 </div>
-                <img src="/images/indiana.png" alt="indiana" className="indiana"/>
-                <img src="/images/chest.png" alt="chest" className="chest"/>
-                <img src="/images/coin.png" alt="coin" className="coin1"/>
-                <img src="/images/coin.png" alt="coin" className="coin2"/>
-                <img src="/images/coin.png" alt="coin" className="coin3"/>
-                <img src="/images/coin.png" alt="coin" className="coin4"/>
+
+                <img src="/images/mib.png" alt="mib" className="mib"/>
+                <img src="/images/doll.png" alt="doll" className="doll"/>
+                <img src="/images/circle-man.png" alt="circle-man" className="circle-man"/>
+                <img src="/images/second-circle-man.png" alt="second-circle-man" className="second-circle-man"/>
+                <img src="/images/triangle-man.png" alt="triangle-man" className="triangle-man"/>
+
                 <div className="button">
-                    <a href={`https://dreamplay.bet/?registration=true?stag=${params.stag}&tracking_link=${params.tracking_link}`} target="_blank"><span
+                    <a href={`https://dreamplay17.com/?registration=true?stag=${params.stag}&tracking_link=${params.tracking_link}`}
+                       target="_blank"><span
                         className="sign-up">{t('signUp')}</span><span>{t('takes')}</span></a>
+                </div>
+                <div className="masks">
+                    <img src="/images/Squid%20game%20mask%20-%20circle.png" alt="circle-mask" className="mask"/>
+                    <img src="/images/Squid%20game%20mask%20-%20square.png" alt="square-mask" className="mask"/>
+                    <img src="/images/Squid%20game%20mask%20-%20triangle.png" alt="triangle-mask" className="mask"/>
                 </div>
             </div>
             <div className="wrapper">
-                <div className="steps">
-                    <div className="step">
-                        <span className="step-index">1</span>
-                        <div className="step-content">
-                            <h3>{t('register')}</h3>
-                            <p>
-                                {t('registerDesc')}
-                            </p>
-                        </div>
-                    </div>
-                    <div className="step">
-                        <span className="step-index">2</span>
-                        <div className="step-content">
-                            <h3>{t('deposit')}</h3>
-                            <p>
-                                {t('depositDesc')}
-                            </p>
-                        </div>
-                    </div>
-                    <div className="step">
-                        <span className="step-index">3</span>
-                        <div className="step-content">
-                            <h3>{t('play')}</h3>
-                            <p>
-                                {t('playDesc')}
-                            </p>
-                        </div>
-                    </div>
+            <div className="steps">
+                    {
+                        cardData.map((item)=>(
+                            <Card id={item.id} title={item.title} text={item.text} key={item.id}/>
+                        ))
+                    }
                 </div>
                 <div className="payments">
-                    <div className="payment">
-                        <img src="/images/visa.png" alt="payment"/>
-                    </div>
-                    <div className="payment">
-                        <img src="/images/mastercard.png" alt="payment"/>
-                    </div>
-                    <div className="payment">
-                        <img src="/images/applepay.png" alt="payment"/>
-                    </div>
-                    <div className="payment">
-                        <img src="/images/googlepay.png" alt="payment"/>
-                    </div>
-                    <div className="payment">
-                        <img src="/images/bank.png" alt="payment"/>
-                    </div>
+                    {
+                        Payments.map((item)=>(
+                            <Payment src={item.src} key={item.src}/>
+                        ))
+                    }
                 </div>
                 <footer className="footer">
                     <h3>
                         {t('footerHeader')}
                     </h3>
                     <ul>
-                        <li>{t('footerList.first')}</li>
-                        <li>{t('footerList.second')}</li>
-                        <li>{t('footerList.third')}</li>
+                        {
+                            Footer.map((item)=>(
+                                <li key={item.text}>
+                                    {t(item.text)}
+                                </li>
+                            ))
+                        }
                     </ul>
                 </footer>
             </div>

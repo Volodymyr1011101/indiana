@@ -50,6 +50,7 @@ h1 {
     position: relative;
     padding: 17px;
     background-image: url("/images/header.jpg");
+    /*background: green;*/
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: center;
@@ -65,9 +66,10 @@ h1 {
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0, 0, 0, 0.5);
-        backdrop-filter: blur(2px);
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(6px);
     }
+
     @media screen and (min-width: 768px) {
         padding: 36px;
         gap: 36px;
@@ -81,62 +83,174 @@ h1 {
     flex-direction: column;
     gap: 10px;
     @media screen and (min-width: 768px) {
+        max-width: 708px;
+        margin: 0 auto;
+        gap: 20px;
+    }
+    @media screen and (min-width: 1024px) {
+        max-width: 851px;
+        margin: 0 auto;
         gap: 20px;
     }
     @media screen and (min-width: 1280px) {
-        max-width: 960px;
+        max-width: 850px;
         margin: 0 auto  ;
     }
 }
 
-.indiana, .chest {
+.header-content h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    @media screen and (min-width: 768px) {
+        font-size: 48px;
+    }
+    @media screen and (min-width: 1024px) {
+        font-size: 64px;
+    }
+}
+
+.header-content h2 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-size: 24px;
+    @media screen and (min-width: 768px) {
+        font-size: 40px;
+    }
+    @media screen and (min-width: 1024px) {
+        font-size: 48px;
+    }
+}
+
+.mib, .circle-man {
     position: absolute;
     z-index: 1;
 }
-.chest {
-    position: absolute;
-    bottom: -35px;
-    left: -90px;
-    width: 309px;
+.circle-man {
+    width: 240px;
+    bottom: -10px;
+    left: -110px;
+
     @media screen and (min-width: 768px) {
-        width: 450px;
+        width: 330px;
+        bottom: -50px;
+        left: -50px;
+    }
+    @media screen and (min-width: 1024px) {
+        width: 320px;
+        bottom: -15px;
+        left: -25px;
     }
     @media screen and (min-width: 1280px) {
-        width: 789px;
-        bottom: -80px;
-        left: -345px;
-    }
-    @media screen and (min-width: 1439px) {
-        left: -285px;
+        width: 280px;
+        bottom: -50px;
+        left: 10px;
     }
     @media screen and (min-width: 1440px) {
-        width: 918px;
-        bottom: -110px;
+        bottom: -35px;
+        left: 100px;
+    }
+    @media screen and (min-width: 1720px) {
+        left: 245px;
+        bottom: -50px;
     }
 
 }
-.indiana {
-    right: -115px;
-    bottom: -40px;
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    width: 272px;
+.mib {
+    width: 360px;
+    bottom: -55px;
+    right: -160px;
+
     @media screen and (min-width: 768px) {
-        width: 426px;
+        width: 450px;
+        bottom: -65px;
+        right: -100px;
+    }
+    @media screen and (min-width: 1024px) {
+        width: 570px;
+        bottom: -135px;
+        right: -140px;
     }
     @media screen and (min-width: 1280px) {
-        width: 635px;
-        bottom: -70px;
+        top: -10px;
         right: -235px;
     }
     @media screen and (min-width: 1440px) {
-        width: 745px;
+        right: -150px;
     }
-
     @media screen and (min-width: 1720px) {
-        right: -125px;
+        width: 640px;
+        right: -180px;
     }
 }
+.doll {
+    display: none;
+}
+    @media screen and (min-width: 1280px) {
+        .doll {
+            z-index: 1;
+            width: 460px;
+            display: block;
+            position: absolute;
+            top: 278px;
+            right: -45px;
+        }
+    }
+    @media screen and (min-width: 1440px) {
+        .doll {
+            right: 40px;
+        }
+    }
+    @media screen and (min-width: 1720px) {
+        .doll {
+            top: 270px;
+            right: 85px;
+        }
+    }
+
+.triangle-man {
+    display: none;
+}
+    @media screen and (min-width: 1280px) {
+        .triangle-man {
+            z-index: 1;
+            width: 270px;
+            display: block;
+            position: absolute;
+            top: 70px;
+            left: -77px;
+        }
+    }
+    @media screen and (min-width: 1440px) {
+        .triangle-man {
+            left: 0;
+        }
+    }
+    @media screen and (min-width: 1720px) {
+        .triangle-man {
+            left: 162px;
+        }
+    }
+
+.second-circle-man {
+    display: none;
+
+}
+    @media screen and (min-width: 1440px) {
+        .second-circle-man {
+            z-index: 1;
+            width: 280px;
+            display: block;
+            position: absolute;
+            top: 315px;
+            left: -192px;
+        }
+    }
+    @media screen and (min-width: 1720px) {
+        .second-circle-man {
+            left: -45px;
+        }
+    }
 
 .button {
     max-width: 278px;
@@ -144,7 +258,7 @@ h1 {
     border-radius: 32px;
     background-image: url("/images/gold.png");
     padding: 14px 0;
-    margin: 0 auto 170px;
+    margin: 0 auto;
     position: relative;
     z-index: 1;
     overflow: hidden;
@@ -185,118 +299,48 @@ h1 {
         text-decoration: none;
     }
     @media screen and (min-width: 768px) {
-        margin: 0 auto 347px;
+        max-width: 406px;
+        margin: 0 auto 110px;
     }
-    @media screen and (min-width: 1280px) {
-        margin: 0 auto 243px;
+    @media screen and (min-width: 1024px) {
+        margin: 20px auto 35px;
     }
 }
 
-.coin1, .coin2, .coin3, .coin4 {
-    position: absolute;
+.masks {
+    position: relative;
     z-index: 1;
-}
-
-.coin1 {
-    width: 130px;
-    transform: rotate3d(0.3, 0, 1, -87deg);
-    scale: -1;
-    right: -50px;
-    top: -10px;
-    filter: blur(0.5px);
-    @media screen and (min-width: 768px) {
-        width: 276px;
-        right: -110px;
-        top: -45px;
-    }
-    @media screen and (min-width: 1280px) {
-        width: 276px;
-        right: 20px;
-        top: -45px;
-    }
-
-    @media screen and (min-width: 1440px) {
-        right: 180px;
-    }
-
-    @media screen and (min-width: 1720px) {
-        right: 210px;
-    }
-
-    @media screen and (min-width: 1920px) {
-        right: 400px;
-    }
-}
-
-.coin2 {
-    width: 80px;
-    transform: rotate3d(0.3, 0, 1, -158deg);
-    scale: -1;
-    top: 0;
-    left: 0;
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+    width: 154px;
+    height: 30px;
+    gap: 32px;
+    margin: 15px auto 40px;
 
     @media screen and (min-width: 768px) {
-        width: 172px;
-        filter: blur(0.8px);
+        width: 300px;
+        height: 66px;
+        gap: 50px;
     }
-
+    @media screen and (min-width: 1024px) {
+        margin: 0 auto 15px;
+    }
     @media screen and (min-width: 1280px) {
-        top: 10px;
-        left: 250px;
-    }
-
-    @media screen and (min-width: 1440px) {
-        top: -20px;
-        left: 330px;
+        width: 400px;
+        height: 66px;
+        gap: 99px;
     }
 }
 
-.coin3 {
-    width: 150px;
-    transform: rotate3d(0.3, 0, 1, -78deg);
-    scale: -1;
-    top: 140px;
-    left: -70px;
-    filter: blur(0.4px);
+.mask {
+    width: 30px;
+    height: 30px;
 
     @media screen and (min-width: 768px) {
-        width: 319px;
-        top: 150px;
-        left: -150px;
-        filter: blur(0.6px);
-    }
-    @media screen and (min-width: 1280px) {
-        top: 150px;
-        left: 20px;
-        filter: blur(1.7px);
-    }
-
-    @media screen and (min-width: 1440px) {
-        left: 100px;
-    }
-
-    @media screen and (min-width: 1719px) {
-        left: 240px;
-    }
-}
-
-.coin4 {
-    display: none;
-
-    @media screen and (min-width: 1280px) {
-        display: block;
-        width: 354px;
-        bottom: -180px;
-        left: 260px;
-        filter: blur(1px);
-    }
-
-    @media screen and (min-width: 1719px) {
-        left: 470px;
-    }
-
-    @media screen and (min-width: 1720px) {
-        left: 340px;
+        width: 67px;
+        height: 66px;
     }
 }
 
@@ -396,6 +440,7 @@ h1 {
 }
 .payment {
     max-width: 20%;
+    flex-grow: 1;
     img {
         width: 100%;
     }

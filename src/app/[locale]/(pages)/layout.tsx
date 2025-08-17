@@ -31,7 +31,7 @@ export default async function LocaleLayout({children, params}: {
         <html lang={locale}>
         <body className={poppins.className}>
         <NextIntlClientProvider messages={messages}>
-        <AutoLanguageRedirect/>
+        {/*<AutoLanguageRedirect/>*/}
             {children}
         </NextIntlClientProvider>
         </body>

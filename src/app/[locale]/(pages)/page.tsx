@@ -37,7 +37,7 @@ export default function Home() {
                     <h2>
                         {t('headerTop')}
                     </h2>
-                    <h1>
+                    <h1 style={{ whiteSpace: 'pre-line' }}>
                         {t('header')}
                     </h1>
                 </div>
